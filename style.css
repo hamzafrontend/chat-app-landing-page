@@ -1,0 +1,348 @@
+/*---------------------
+  Universal CSS
+-----------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+/* if we didnot use this we will not be able to center the card verically. */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-light-grayish-violet);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*------------------------
+  Primary Colors for Text
+------------------------*/
+
+:root {
+  --color-pale-violet: hsl(276, 100%, 81%);
+  --color-moderate-violet: hsl(276, 55%, 52%);
+  --color-moderate-violet-light: hsl(276, 55%, 93%);
+  --color-desaturated-dark-violet: hsl(271, 15%, 43%);
+  --color-grayish-blue: hsl(206, 6%, 79%);
+  --color-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --color-dark-grayish-violet: hsl(270, 7%, 64%);
+}
+
+/*------------------------------
+  Primary Colors for Gradients
+-------------------------------*/
+
+:root {
+  --color-light-magenta: hsl(293, 100%, 63%);
+  --color-light-violet: hsl(264, 100%, 61%);
+}
+
+/*----------------
+  Neutral Colors
+-----------------*/
+
+:root {
+  --color-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --color-light-grayish-violet: hsl(270, 20%, 96%);
+  --color-very-light-magenta: hsl(289, 100%, 72%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/*--------
+  Body
+--------*/
+
+/* .wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1500px;
+} */
+
+.shape {
+  width: 150%;
+  height: 65%;
+  background: linear-gradient(
+    var(--color-light-magenta),
+    var(--color-light-violet)
+  );
+  border-radius: 0 0 20rem 20rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-70%);
+}
+
+.mobile-chat {
+  padding-inline: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  width: 18em;
+  background-color: var(--color-light-grayish-violet);
+  border: 0.9em solid var(--color-white);
+  border-radius: 2em;
+  margin-inline: auto;
+  margin-top: 3.5em;
+  box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mobile-top-gradient {
+  background: linear-gradient(
+    to left,
+    var(--color-light-magenta),
+    var(--color-light-violet)
+  );
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+  padding-inline: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.mobile-top-gradient-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.mobile-speaker {
+  background-color: var(--color-white);
+  width: 60%;
+  height: 1em;
+  margin-inline: auto;
+  border-radius: 0 0 0.8em 0.8em;
+  margin-bottom: 0.7em;
+}
+
+.mobile-top-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  padding: 1px;
+}
+
+.mobile-top-left-icon,
+.mobile-top-right-icon {
+  color: var(--color-white);
+}
+
+.mobile-top-right-icon {
+  /* It moves this icon all the way to right */
+  margin-left: auto;
+}
+
+.mobile-top-user-info {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-left: 0.3em;
+}
+
+.mobile-top-user-name {
+  font-size: 0.7em;
+}
+
+.mobile-top-user-status {
+  margin-top: 0.4em;
+  font-size: 0.55em;
+  color: var(--color-pale-violet);
+}
+
+.message-box {
+  border-radius: 0.7em;
+  font-size: 0.55em;
+  padding: 0.9em;
+  margin-top: 1em;
+  max-width: 65%;
+  line-height: 1.5em;
+}
+
+.sender {
+  background-color: var(--color-moderate-violet-light);
+  color: var(--color-moderate-violet);
+}
+
+.receiver {
+  background-color: var(--color-white);
+  color: var(--color-very-dark-desaturated-violet);
+  align-self: flex-end;
+}
+
+.dog-images {
+  display: flex;
+  justify-content: right;
+  margin-top: 0.8em;
+  gap: 0.5em;
+  margin-right: 1em;
+}
+
+.dog-image {
+  width: 45px;
+  border-radius: 25%;
+}
+
+.price-offer {
+  background: linear-gradient(
+    to right,
+    var(--color-light-magenta),
+    var(--color-light-violet)
+  );
+  max-width: 70%;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  color: var(--color-white);
+  border-radius: 0.6em 0.6em 0.6em 0.3em;
+  margin-top: 0.5em;
+  padding: 0.6em;
+}
+
+.radio-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+}
+
+.price-offer-time {
+  font-size: 0.5em;
+  margin-left: 1em;
+}
+
+.price-offer-rate {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.text-placeholder {
+  background-color: var(--color-white);
+  margin-top: 0.8em;
+  margin-bottom: 0.6em;
+  padding-block: 0.5em;
+  border-radius: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type-text {
+  color: var(--color-grayish-blue);
+  font-size: 0.6em;
+  margin-left: 2.3em;
+  flex-grow: 1; /* Allow the text to take up available space */
+}
+
+.submit-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-very-dark-desaturated-violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent button from shrinking */
+  color: var(--color-white);
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-right: 0.3em;
+}
+
+.booking-content {
+  margin-top: 6em;
+  text-align: center;
+  width: 80%;
+  margin-inline: auto;
+  padding-bottom: 3em;
+}
+
+.booking-content-heading {
+  color: var(--color-very-dark-desaturated-violet);
+  font-size: clamp(2.5rem, calc(2.5rem + 1vw), 4.5rem);
+  font-weight: 500;
+}
+
+.booking-content-paragraph {
+  margin-top: 1.5em;
+  color: var(--color-dark-grayish-violet);
+  line-height: 2em;
+  max-width: 600px;
+}
+
+/*----------------
+  Media Queries
+-----------------*/
+
+@media screen and (min-width: 1000px) {
+  .shape {
+    width: 40%;
+    height: 80%;
+    max-width: 650px;
+    transform: translateX(-20%);
+  }
+
+
+  .shape-right {
+    width: 25%;
+    height: 90%;
+    background-color: var(--color-very-light-magenta);
+    opacity: 5%;
+    border-radius: 20rem 20rem 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    /* transform: translateX(100px); */
+  }
+
+
+
+  .wrapper {
+    width: 70%;
+    max-width: 1100px;
+    margin-inline: auto;
+    display: flex;
+    gap: 4em;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .booking-content {
+    margin-top: 0;
+    text-align: left;
+  }
+}
